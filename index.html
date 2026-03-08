@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:"Courier New", monospace;
+background:linear-gradient(135deg,#000000,#1a1a1a,#000000);
+color:white;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+max-width:90%;
+padding:20px 30px;
+}
+
+.date{
+color:#aaa;
+margin-bottom:auto;
+}
+
+h1{
+font-weight:300;
+font-size:8vw;
+margin-bottom:auto;
+}
+
+.typing{
+border-right:2px solid white;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 3s steps(40,end) forwards, blink .7s infinite;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:100%}
+}
+
+@keyframes blink{
+50%{border-color:transparent}
+}
+
+.message{
+opacity:0;
+animation:fade 2s forwards;
+animation-delay:4s;
+line-height:1.8;
+color:#ccc;
+}
+
+@keyframes fade{
+to{opacity:1}
+}
+
+/* floating hearts */
+
+.heart{
+position:absolute;
+color:#ff4d6d;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body onclick="toggleAudio()">
+
+<audio id="music">
+<source src="arz.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<div class="date">9 March 2026</div>
+
+<h1 class="typing">
+Happy Birthday<br>Cutie(Bobby)<br><br>
+</h1>
+
+<div class="message">
+You are one of the most special people in my life ✨<br>
+Your smile makes my day better 😊<br><br>
+May your life be filled with happiness,<br>
+success and beautiful moments.<br><br>
+Stay happy always 🌸
+</div>
+
+</div>
+
+<script>
+
+let audio = document.getElementById("music");
+audio.currentTime = 64;
+
+function toggleAudio(){
+if(audio.paused){
+audio.play();
+}else{
+audio.pause();
+}
+}
+
+/* hearts generator */
+
+setInterval(()=>{
+
+let heart = document.createElement("div");
+heart.className = "heart";
+heart.innerHTML = "❤";
+
+heart.style.left = Math.random()*100 + "vw";
+heart.style.fontSize = (Math.random()*20+10) + "px";
+heart.style.animationDuration = (Math.random()*3+4) + "s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},500);
+
+</script>
+
+</body>
+</html>t>
+
+</body>
+</html>y onclick="toggleAudio()">
+
+	<audio id="music">
+		<source src="lovestory.mp3" type="audio/mpeg">
+	</audio>
+	
+    <div class="container">
+        <div class="heart">☺️️</div>
+        <h1>Happy Birthday Cutie!</h1>
+        <p>Happy Birthday 🎉
+        I hope this year brings you lots of happiness, success, and all the things you wish for.</p>
+        <p>You’re a really special person and I’m lucky to know you.
+        Enjoy your day 😊 ✨</p>
+    </div>
+
+    <script>
+    let audio = document.getElementById("music")
+    audio.currentTime = 8;
+    
+    function toggleAudio() {
+   		 if (audio.paused) {
+   			 audio.play();
+   			 } else {
+   				 audio.pause();
+   			 }
+   		 }	
+    
+    
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('bg-heart');
+            heart.innerHTML = '️️❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
